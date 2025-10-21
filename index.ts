@@ -6,7 +6,7 @@ import { logger } from "@/utils/logger.js";
 import { confirm } from "@inquirer/prompts";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import packageJSON from "@/package.json" with { type: "json" };
+import packageJSON from "./package.json" with { type: "json" };
 import { Locale } from "@/utils/locales.js";
 
 process.title = `Advanced Discord OwO Tool Farm v${packageJSON.version} - Copyright 2025 © Elysia x Kyou Izumi`;
@@ -65,5 +65,6 @@ if (!argv._.length) {
     const { config } = await InquirerUI.prompt(client);
     await BaseAgent.initialize(client, config);
 }
+
 
 
