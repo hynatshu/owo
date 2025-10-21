@@ -1,4 +1,5 @@
 import { UpdateFeature } from "@/services/UpdateService.js";
+import express from 'express';
 import { BaseAgent } from "@/structure/BaseAgent.js";
 import { ExtendedClient } from "@/structure/core/ExtendedClient.js";
 import { InquirerUI } from "@/structure/InquirerUI.js";
@@ -14,7 +15,28 @@ console.clear();
 
 const updateFeature = new UpdateFeature();
 const client = new ExtendedClient();
+//temp start
+const app = express();
+const PORT = process.env.PORT || 3000;
 
+// Health check endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'online', 
+    service: 'owo-bot',
+    timestamp: new Date().toISOString()
+  });
+});
+
+app.get('/health', (req, res) => {
+  res.send('OK');
+});
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Health check server running on port ${PORT}`);
+});
+//temp
 const argv = await yargs(hideBin(process.argv))
     .scriptName("adotf")
     .usage("$0 <command> [options]")
@@ -65,6 +87,7 @@ if (!argv._.length) {
     const { config } = await InquirerUI.prompt(client);
     await BaseAgent.initialize(client, config);
 }
+
 
 
 
