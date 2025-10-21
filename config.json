@@ -1,0 +1,51 @@
+{
+  "username": "quantum_tiger_1784_66953",
+  "token": "MTQyOTc2OTg2MTgxNDQxOTU1Ng.G7g3H5.JailxIcuLcLb0-S_BbKvM-J_DrEE8tLk0e5HQQ",
+  "guildID": "1421179647734845563",
+  "channelID": [
+    "1424107212997001307",
+    "1429704300707184671",
+    "1427627559058804776"
+  ],
+  "wayNotify": [],
+  "adminID": "<@193189255634223105>",
+  "prefix": ".",
+  "captchaAPI": "2captcha",
+  "apiKey": "https://api.2captcha.com",
+  "autoHuntbot": true,
+  "autoTrait": "efficiency",
+  "useAdotfAPI": true,
+  "autoPray": [
+    "pray",
+    "pray <@193189255634223105>"
+  ],
+  "autoGem": 0,
+  "gemTier": [
+    "common",
+    "uncommon",
+    "rare",
+    "epic",
+    "mythical"
+  ],
+  "useSpecialGem": false,
+  "autoLootbox": true,
+  "autoFabledLootbox": false,
+  "autoQuote": [
+    "owo",
+    "quote"
+  ],
+  "autoRPP": [
+    "run",
+        "pup",
+        "piku"
+  ],
+  "autoDaily": true,
+  "autoCookie": true,
+  "autoClover": true,
+  "useCustomPrefix": true,
+  "autoSleep": true,
+  "autoSell": true,
+  "autoReload": true,
+  "autoResume": true,
+  "showRPC": true
+}
