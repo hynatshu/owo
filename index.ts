@@ -1,13 +1,13 @@
-import { UpdateFeature } from "../services/UpdateService.js";
-import { BaseAgent } from "../structure/BaseAgent.js";
-import { ExtendedClient } from "./structure/core/ExtendedClient.js";
-import { InquirerUI } from "./structure/InquirerUI.js";
-import { logger } from "../utils/logger.js";
+import { UpdateFeature } from "@/services/UpdateService.js";
+import { BaseAgent } from "@/structure/BaseAgent.js";
+import { ExtendedClient } from "@/structure/core/ExtendedClient.js";
+import { InquirerUI } from "@/structure/InquirerUI.js";
+import { logger } from "@/utils/logger.js";
 import { confirm } from "@inquirer/prompts";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import packageJSON from "./package.json" with { type: "json" };
-import { Locale } from "../utils/locales.js";
+import packageJSON from "@/package.json" with { type: "json" };
+import { Locale } from "@/utils/locales.js";
 
 process.title = `Advanced Discord OwO Tool Farm v${packageJSON.version} - Copyright 2025 © Elysia x Kyou Izumi`;
 console.clear();
@@ -65,4 +65,5 @@ if (!argv._.length) {
     const { config } = await InquirerUI.prompt(client);
     await BaseAgent.initialize(client, config);
 }
+
 
